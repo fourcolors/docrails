@@ -156,7 +156,7 @@ You can view the search path by inspecting +Rails.application.config.assets.path
 Additional (fully qualified) paths can be added to the pipeline in +config/application.rb+. For example:
 
 <ruby>
-config.assets.paths << Rails.root.join("app", "assets", "flash")
+config.assets.paths << Rails.root.join("app", "assets", "flash").to_s
 </ruby>
 
 Paths are traversed in the order that they occur in the search path.
